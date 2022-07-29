@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white"
+        app:layout_constraintLeft_toLeftOf="@id/storeImage"
+        app:layout_constraintRight_toLeftOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"/>
+
+    <ImageView
+        android:id="@+id/storeImage"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alphamega" />
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:autoSizeMaxTextSize="25sp"
+        android:autoSizeMinTextSize="9sp"
+        android:autoSizeStepGranularity="3sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/storeImage"
+        app:layout_constraintLeft_toRightOf="@id/storeImage"
+        app:layout_constraintTop_toTopOf="@+id/storeImage"
+        app:layout_constraintRight_toLeftOf="@id/guideline2"/>
+
+    <ImageView
+        android:id="@+id/outlineTop"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/outlineBot"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/grey" />
+
+    <ImageView
+        android:id="@+id/outlineLeft"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/outlineRight"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <ImageButton
+        android:id="@+id/locations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitXY"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/storeImage"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="@id/outlineRight"
+        app:layout_constraintTop_toTopOf="@id/storeImage"
+        app:srcCompat="@drawable/location" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.835" />
+
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="50dp"-->
+    <!--    android:background="@drawable/roundedcornerswhite">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/storeImage"-->
+    <!--        android:layout_width="70dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        app:srcCompat="@drawable/alphamega"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/storeName"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textSize="23sp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:text="TextView"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/storeImage"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/storeImage"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/storeImage" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

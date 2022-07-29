@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banana" />
+
+    <ImageView
+        android:id="@+id/add_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="choose_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/product_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/product_image"
+        app:srcCompat="@drawable/addbutton" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Banana"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/product_image"
+        app:layout_constraintRight_toLeftOf="@id/add_button"
+        app:layout_constraintTop_toTopOf="@id/product_image" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/product_image"
+        app:layout_constraintRight_toLeftOf="@id/add_button"
+        app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+    <ImageView
+        android:id="@+id/outlineBot"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_image"
+        app:srcCompat="@drawable/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

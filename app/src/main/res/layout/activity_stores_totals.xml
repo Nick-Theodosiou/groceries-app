@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".StoresTotals">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:autoSizeMaxTextSize="40sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeStepGranularity="5sp"
+        android:autoSizeTextType="uniform"
+        android:background="#404040"
+        android:gravity="center"
+        android:text="All stores"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/settingsguidline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#404040"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/settingsguidline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#404040"
+        android:onClick="goBack"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/settingsguidline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/settingsguidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="6dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10sp"
+        app:layout_constraintBottom_toTopOf="@id/save"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#E67E22"
+        android:gravity="center"
+        android:text="Save list"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

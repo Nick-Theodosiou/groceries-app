@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/hgImg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vgImg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banana" />
+
+    <ImageButton
+        android:id="@+id/minus_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        android:onClick="minus"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@+id/hgQnt1"
+        app:layout_constraintBottom_toTopOf="@+id/hgQnt2"
+        app:layout_constraintLeft_toRightOf="@id/vgQnt"
+        app:layout_constraintRight_toLeftOf="@id/vgMin"
+        app:srcCompat="@drawable/minus_no_background" />
+
+    <ImageButton
+        android:id="@+id/plus_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        android:onClick="plus"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@+id/hgQnt1"
+        app:layout_constraintBottom_toTopOf="@+id/hgQnt2"
+        app:layout_constraintLeft_toRightOf="@id/vgPls"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/plus_no_background" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:autoSizeMaxTextSize="36dp"
+        android:autoSizeMinTextSize="6dp"
+        android:autoSizeStepGranularity="1dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/remove"
+        app:layout_constraintRight_toLeftOf="@+id/plus_btn"
+        app:layout_constraintLeft_toRightOf="@id/minus_btn"
+        app:layout_constraintTop_toTopOf="@id/plus_btn" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:autoSizeMaxTextSize="25sp"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeStepGranularity="0.5sp"
+        android:autoSizeTextType="uniform"
+        android:text="Banana"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/product_image"
+        app:layout_constraintRight_toLeftOf="@id/minus_btn"
+        app:layout_constraintTop_toTopOf="@id/product_image" />
+
+    <TextView
+        android:id="@+id/product_subtotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Subtotal: "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/product_image"
+        app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+    <TextView
+        android:id="@+id/subtotal_money"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="25dp"
+        android:autoSizeMinTextSize="5dp"
+        android:autoSizeStepGranularity="0.5dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@id/product_subtotal"
+        app:layout_constraintLeft_toRightOf="@id/product_subtotal"
+        app:layout_constraintRight_toLeftOf="@id/remove"
+        app:layout_constraintTop_toTopOf="@id/product_subtotal" />
+
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/rounded_corners2"
+        android:onClick="remove"
+        android:text="Remove"
+        app:layout_constraintLeft_toLeftOf="@id/minus_btn"
+        app:layout_constraintRight_toRightOf="@id/plus_btn"
+        app:layout_constraintTop_toBottomOf="@id/plus_btn" />
+
+    <ImageView
+        android:id="@+id/outlineBot"
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_image"
+        app:srcCompat="@drawable/black" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="99dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgQnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hgImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hgQnt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16483517" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hgQnt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7222222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vgPls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

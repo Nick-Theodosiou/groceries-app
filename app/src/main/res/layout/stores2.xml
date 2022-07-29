@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toLeftOf="@id/storeImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/storeImage"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alphamega" />
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:autoSizeMaxTextSize="26sp"
+        android:autoSizeMinTextSize="6sp"
+        android:autoSizeStepGranularity="3sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/storeImage"
+        app:layout_constraintLeft_toRightOf="@id/storeImage"
+        app:layout_constraintRight_toLeftOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/storeImage" />
+
+    <ImageView
+        android:id="@+id/outlineTop"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/outlineBot"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/grey" />
+
+    <ImageView
+        android:id="@+id/outlineLeft"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/outlineRight"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black" />
+
+    <TextView
+        android:id="@+id/totaltxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Total:"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/storeImage"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:autoSizeMaxTextSize="26sp"
+        android:autoSizeMinTextSize="6dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="€120.40"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/totaltxt" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <RadioButton
+        android:id="@+id/selected"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:buttonTint="#E67E22"
+        android:checked="false"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        app:layout_constraintBottom_toTopOf="@id/outlineBot"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintRight_toLeftOf="@id/outlineRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

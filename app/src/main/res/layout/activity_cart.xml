@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Cart">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#404040"
+        android:gravity="center"
+        android:text="Your Cart"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/no_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toTopOf="@id/textTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:background="#E67E22"
+        android:gravity="center_vertical"
+        android:text=" Total: "
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E67E22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textTotal"
+        app:layout_constraintRight_toLeftOf="@+id/otherStores"
+        app:layout_constraintTop_toTopOf="@id/textTotal"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:autoSizeMaxTextSize="36dp"
+        android:autoSizeMinTextSize="10dp"
+        android:autoSizeStepGranularity="1dp"
+        android:autoSizeTextType="uniform"
+        android:background="#E67E22"
+        android:gravity="center_vertical"
+        android:text="€0.00"
+        android:textColor="@color/black"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textTotal"
+        app:layout_constraintRight_toLeftOf="@+id/otherStores"
+        app:layout_constraintTop_toTopOf="@id/textTotal" />
+
+    <Button
+        android:id="@+id/otherStores"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#E67E22"
+        android:onClick="otherStores"
+        android:gravity="center"
+        android:text="  Other stores  "
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:background="@color/mainGray"
+        android:onClick="goBack"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toLeftOf="@+id/backhGd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/backhGd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
